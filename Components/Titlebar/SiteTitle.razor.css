@@ -1,0 +1,17 @@
+
+.header {
+    text-align: center;
+    margin: auto;
+    padding: 1rem;
+}
+
+.header__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: .75rem;
+    font-size: 4rem;
+}
+
+.header__author {
+    margin-top: 0;
+}

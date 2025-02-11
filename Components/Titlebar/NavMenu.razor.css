@@ -1,0 +1,36 @@
+.navmenu {
+    display: flex;
+    text-align: center;
+}
+
+.navmenu__item {
+    flex: 1 0 15%;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #34495e;
+    transition-duration: 150ms;
+}
+
+    .navmenu__item:hover {
+        transform: scale(1.05);
+    }
+    
+    .navmenu__item > a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .navmenu__item > a:visited {
+        color: white;
+    }
+
+    ::deep .navmenu__item > a.active {
+        color: white;
+        text-decoration: underline;
+        text-decoration-color: #e74c3c;
+        text-underline-offset: .5rem;
+        text-decoration-thickness: .25rem;
+    }
+    
+    

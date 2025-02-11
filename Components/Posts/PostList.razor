@@ -1,0 +1,17 @@
+<h3>PostList</h3>
+<div class="postlist">
+
+    @if (getProjectsError || projects is null)
+    {
+        <p>A problem occurred.</p>
+    }
+    else
+    {
+        @foreach (var project in projects)
+        {
+            // This is using a postcard for projects, but this is temp
+            // because I don't have enough data for posts right now
+            <PostCard Title="@project.Title" Language="@project.Language"></PostCard>
+        }
+    }
+</div>
