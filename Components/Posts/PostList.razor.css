@@ -1,4 +1,11 @@
+.title {
+    margin: 1rem;
+    padding: 0.5rem;
+}
+
 .postlist {
     display: flex;
     flex-wrap: wrap;
+    padding: .5rem;
+    margin: .5rem;
 }

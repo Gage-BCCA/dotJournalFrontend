@@ -10,31 +10,40 @@ public partial class PostList : ComponentBase
     [Inject]
     HttpClient Client { get; set; }
 
-    private IEnumerable<Project>? projects = [];
-    private bool shouldRender;
-    private bool getProjectsError;
+    private IEnumerable<Project>? _projects = [];
+    private bool _shouldRender;
+    private bool _getProjectsError;
+    
+    [Parameter]
+    public string PostListTitle { get; set; }
 
-    protected override bool ShouldRender() => shouldRender;
+    protected override bool ShouldRender() => _shouldRender;
     
     protected override async Task OnInitializedAsync()
     {
         var request = new HttpRequestMessage(HttpMethod.Get,
             "http://localhost:5099/projects");
 
-        var response = await Client.SendAsync(request);
-
-        if (response.IsSuccessStatusCode)
+        try
         {
-            using var responseStream = await response.Content.ReadAsStreamAsync();
-            projects = await JsonSerializer.DeserializeAsync
-                <IEnumerable<Project>>(responseStream);
+            var response = await Client.SendAsync(request);
+            if (response.IsSuccessStatusCode)
+            {
+                await using var responseStream = await response.Content.ReadAsStreamAsync();
+                _projects = await JsonSerializer.DeserializeAsync
+                    <IEnumerable<Project>>(responseStream);
+            }
+            else
+            {
+                _getProjectsError = true;
+            }
         }
-        else
+        catch (Exception e)
         {
-            getProjectsError = true;
+            _getProjectsError = true;
         }
 
-        shouldRender = true;
+        _shouldRender = true;
 
     }
 

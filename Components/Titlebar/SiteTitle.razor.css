@@ -1,17 +1,28 @@
 
-.header {
+.banner {
     text-align: center;
-    margin: auto;
+    margin: 0;
     padding: 1rem;
+    background-color: #34495e;
+    color: white;
 }
 
-.header__title {
+.banner__sitename {
+    background-color: #b32121;
+    border-radius: .5rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 50%;
+}
+    .banner__sitename > p {
+        padding: .1rem;
+    }
+
+.banner__title {
     margin-top: 0;
     margin-bottom: 0;
     letter-spacing: .75rem;
     font-size: 4rem;
-}
-
-.header__author {
-    margin-top: 0;
 }

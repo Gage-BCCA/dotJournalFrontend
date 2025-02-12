@@ -5,18 +5,10 @@
     margin: .5rem;
     color: white;
     border-radius: .5rem;
-    transition: 150ms;
+    box-shadow: 10px 5px 5px #95a5a6;
+    transition: 250ms;
+    overflow-x: hidden;
 }
-
-    .postcard__link {
-        text-align: right;
-        opacity: 0;
-        transition: opacity 1s;
-    }
-    
-    .postcard > * {
-            transition: transform 150ms;
-        }
 
     .postcard:hover {
         flex-grow: 15;
@@ -29,12 +21,26 @@
 
     .postcard:hover .postcard__link {
         opacity: 1;
-        transform: translateX(-150px);
     }
-    
+
+.postcard__link {
+    text-align: left;
+    opacity: 0;
+    transition: 400ms;
+}
+
+.postcard__title {
+    transition: 200ms;
+}
+
+.postcard__language {
+    transition: 300ms;
+}
+
 .tags {
     display: flex;
     flex-wrap: wrap;
+    transition: 150ms;
 }
 
 .tags__item {

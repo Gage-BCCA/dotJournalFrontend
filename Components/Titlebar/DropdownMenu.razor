@@ -1,0 +1,12 @@
+<div class="dropdown" @onmouseenter="ToggleVisibility" @onmouseleave="ToggleVisibility">
+    <div  class="dropdown__button">
+        <p>@Title</p>
+    </div>
+
+    <div class="@(IsVisible ? "visible" : "hidden")  dropdown__menu">
+        @foreach (DropdownLink link in Links)
+        {
+            <DropdownItem Url="@link.LinkUrl" Text="@link.LinkText"></DropdownItem>
+        }
+    </div>
+</div>

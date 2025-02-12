@@ -1,0 +1,20 @@
+.dropdown__option {
+    color: white;
+    background-color: #b32121;
+    padding: 1rem;
+    transition-duration: 250ms;
+    margin-top: .2rem;
+    border-radius: .25rem;
+}
+
+    .dropdown__option ::deep > a {
+        text-decoration: none;
+    }
+    
+    .dropdown__option ::deep > a:visited {
+        color: white;
+    }
+    
+    .dropdown__option:hover {
+        background-color: #e74c3c;
+    }
