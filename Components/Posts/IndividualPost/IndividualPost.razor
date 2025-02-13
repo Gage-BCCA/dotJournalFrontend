@@ -1,0 +1,13 @@
+<h3>Post</h3>
+
+@if (_getPostError)
+{
+    <h1>An Error Occurred</h1>
+}
+else 
+{
+    <h1>@_post.Title</h1>
+    <div>
+       @((MarkupString) ToHtml(_post.Content))
+    </div>
+}

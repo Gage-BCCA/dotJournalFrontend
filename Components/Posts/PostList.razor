@@ -1,17 +1,15 @@
 <h2 class="title">@PostListTitle</h2>
 <div class="postlist">
 
-    @if (_getProjectsError)
+    @if (_getPostsError)
     {
         <p>A problem occurred.</p>
     }
     else
     {
-        @foreach (var project in _projects)
+        @foreach (var post in _posts)
         {
-            // This is using a postcard for projects, but this is temp
-            // because I don't have enough data for posts right now
-            <PostCard Title="@project.Title" Language="@project.Language"></PostCard>
+            <PostCard Post="@post"></PostCard>
         }
     }
 </div>

@@ -1,11 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 
 * {
-    font-family: "Afacad Flux", serif;
+    font-family: "IBM Plex Sans", serif;
 }
 
 body {
     margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Mono", serif;
 }
 
 a {
