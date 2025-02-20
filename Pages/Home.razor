@@ -4,12 +4,40 @@
 <PageTitle>Home</PageTitle>
 
 <div class="welcome">
-    <h1>Hello, world!</h1>
-    <p>This is my personal coding blog/journal/notepad.</p>
+    <h1 class="welcome__header">Hello, world!</h1>
+    <h2>Welcome to DotJournal!</h2>
     <p>
-        Every project that I'm working on that I feel like writing
-        about, I'll do so here.
+        It's the personal blog portion of FailedAlgorithm. This is where I'll keep all 
+        of my project writings, blog posts, ramblings, and tools.
     </p>
+    <div class="two-col-section">
+        <div class="column">
+            <h2>About this Site</h2>
+            <div class="column__content">
+                <p>
+                    This site is written using Blazor WASM (I love Blazor) for the
+                    frontend and a .NET Web API for the backend. The datastore is
+                    a SQL server.
+                </p> 
+            </div>
+
+        </div>
+        <div class="column">
+            <h2>About Me</h2>
+            <div class="column__content">
+                <p>
+                    I am a Cybersecurity Analyst whose on a journey to become
+                    a software developer. I've got around 6 years of Sysadmin
+                    experience, with around 2 years of that being focused on
+                    security.
+                </p>
+                <p>
+                    I primarily write in C#, Python, and PowerShell. I love pushing
+                    and pulling data, and writing scripts to help save time.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <PostList PostListTitle="Recent Posts"></PostList>

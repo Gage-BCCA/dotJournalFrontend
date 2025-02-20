@@ -6,7 +6,7 @@
     color: white;
     border-radius: .5rem;
     box-shadow: 10px 5px 5px #95a5a6;
-    transition: 250ms;
+    transition-duration: 400ms;
     overflow-x: hidden;
     height: 200px;
     align-content: center;
@@ -28,21 +28,21 @@
 .postcard__link {
     text-align: left;
     opacity: 0;
-    transition: 400ms;
+    transition: 450ms;
 }
 
 .postcard__title {
-    transition: 200ms;
+    transition: 300ms;
 }
 
 .postcard__language {
-    transition: 300ms;
+    transition: 400ms;
 }
 
 .tags {
     display: flex;
     flex-wrap: wrap;
-    transition: 150ms;
+    transition: 275ms;
 }
 
 .tags__item {
