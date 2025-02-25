@@ -1,0 +1,13 @@
+@page "/projects/{ProjectId:int}"
+
+
+<IndividualProject ProjectId="@ProjectId"></IndividualProject>
+<PostList PostListTitle="All Posts" IsCompact="@false" ApiEndpoint="@ConstructApiEndpoint()"></PostList>
+@code {
+    [Parameter] public int ProjectId { get; set; }
+
+    private string ConstructApiEndpoint()
+    {
+        return "parent-project?projectid=" + ProjectId;
+    }
+}

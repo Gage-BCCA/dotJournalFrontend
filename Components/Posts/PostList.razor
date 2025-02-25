@@ -9,7 +9,10 @@
     {
         @foreach (var post in _posts)
         {
-            <PostCard Post="@post"></PostCard>
+            <CascadingValue Name="IsCompact" Value="@IsCompact">
+                <PostCard Post="@post"></PostCard>
+            </CascadingValue>
+            
         }
     }
 </div>

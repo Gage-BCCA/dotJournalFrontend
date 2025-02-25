@@ -3,20 +3,21 @@ using CodeJournal.Entities.Responses;
 using Microsoft.AspNetCore.Components;
 using System.Text.Json;
 
-namespace CodeJournal.Components.Posts.IndividualPost
+namespace CodeJournal.Components.Projects.IndividualProject;
+
+public partial class IndividualProject : ComponentBase
 {
+    [Parameter] public int ProjectId { get; set; }
     
-    public partial class IndividualPost : ComponentBase
-    {
-        [Inject] HttpClient Client { get; set; }
+     [Inject] HttpClient Client { get; set; }
     
         [Parameter] public int PostId { get; set; }
 
-        private IndividualPostResponse? _individualPostResponse = new IndividualPostResponse();
-        private Post _post = new Post();
+        private IndividualProjectResponse? _individualProjectResponse = new IndividualProjectResponse();
+        private Project _project = new Project();
 
         private bool _shouldRender;
-        private bool _getPostError;
+        private bool _getProjectError;
         private bool _isLoading = true;
     
         protected override bool ShouldRender() => _shouldRender;
@@ -24,7 +25,7 @@ namespace CodeJournal.Components.Posts.IndividualPost
         protected override async Task OnInitializedAsync()
         {
             var request = new HttpRequestMessage(HttpMethod.Get,
-                $"https://j-api.failedalgorithm.com/posts/{PostId}");
+                $"https://j-api.failedalgorithm.com/projects/{ProjectId}");
 
             try
             {
@@ -33,25 +34,24 @@ namespace CodeJournal.Components.Posts.IndividualPost
                 if (response.IsSuccessStatusCode)
                 {
                     await using var responseStream = await response.Content.ReadAsStreamAsync();
-                    _individualPostResponse = await JsonSerializer.DeserializeAsync
-                        <IndividualPostResponse>(responseStream);
-                    if (_individualPostResponse != null)
+                    _individualProjectResponse = await JsonSerializer.DeserializeAsync
+                        <IndividualProjectResponse>(responseStream);
+                    if (_individualProjectResponse != null)
                     {
-                        if (_individualPostResponse.Status != "success" || _individualPostResponse.Post == null)
+                        if (_individualProjectResponse.Status != "success" || _individualProjectResponse.Project == null)
                         {
-                            _getPostError = true;
+                            _getProjectError = true;
                         }
                         else
                         {
-                            _post = _individualPostResponse.Post;
-                            _post.FormatContent();
+                            _project = _individualProjectResponse.Project;
                         }
 
                     }
                 }
                 else
                 {
-                    _getPostError = true;
+                    _getProjectError = true;
                 }
                 
                 
@@ -59,18 +59,11 @@ namespace CodeJournal.Components.Posts.IndividualPost
             }
             catch (Exception e)
             {
-                _getPostError = true;
+                _getProjectError = true;
             }
 
             _isLoading = false;
             _shouldRender = true;
 
         }
-
-        private string ToHtml(string html)
-        {
-            return string.IsNullOrEmpty(html) ? string.Empty : Markdig.Markdown.ToHtml(html);
-        }
-    }
 }
-

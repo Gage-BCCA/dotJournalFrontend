@@ -5,6 +5,6 @@ namespace CodeJournal.Components.Posts;
 
 public partial class PostCard : ComponentBase
 {
-    [Parameter]
-    public Post Post { get; set; }
+    [Parameter] public PostSummary Post { get; set; }
+    [CascadingParameter(Name="IsCompact")] private bool IsCompact { get; set; }
 }

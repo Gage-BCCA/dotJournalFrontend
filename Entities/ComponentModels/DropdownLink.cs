@@ -1,4 +1,4 @@
-namespace CodeJournal.Entities
+namespace CodeJournal.Entities.ComponentModels
 {
     public class DropdownLink
     {

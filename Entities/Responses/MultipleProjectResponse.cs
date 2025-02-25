@@ -2,11 +2,11 @@ using System.Text.Json.Serialization;
 
 namespace CodeJournal.Entities.Responses;
 
-public class PostResponse
+public class MultipleProjectResponse
 {
     [JsonPropertyName("status")]
     public String? Status { get; set; }
     
-    [JsonPropertyName("posts")]
-    public List<Post>? PostList { get; set; }
+    [JsonPropertyName("projects")]
+    public List<ProjectSummary>? Projects { get; set; }
 }

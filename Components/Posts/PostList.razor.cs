@@ -12,20 +12,21 @@ public partial class PostList : ComponentBase
     [Inject]
     HttpClient Client { get; set; }
 
-    private IEnumerable<Post>? _posts = [];
-    private PostResponse _rawResponse;
+    private IEnumerable<PostSummary>? _posts = [];
+    private MultiplePostResponse _rawResponse;
     private bool _shouldRender;
     private bool _getPostsError;
     
-    [Parameter]
-    public string PostListTitle { get; set; }
+    [Parameter] public string PostListTitle { get; set; }
+    [Parameter] public bool IsCompact { get; set; } = true;
+    [Parameter] public string ApiEndpoint { get; set; } = "all";
 
     protected override bool ShouldRender() => _shouldRender;
     
     protected override async Task OnInitializedAsync()
     {
         var request = new HttpRequestMessage(HttpMethod.Get,
-            "http://localhost:5099/posts");
+            "https://j-api.failedalgorithm.com/posts/" + ApiEndpoint);
 
         try
         {
@@ -34,7 +35,7 @@ public partial class PostList : ComponentBase
             {
                 await using var responseStream = await response.Content.ReadAsStreamAsync();
                 _rawResponse = await JsonSerializer.DeserializeAsync
-                    <PostResponse>(responseStream);
+                    <MultiplePostResponse>(responseStream);
                 _posts = _rawResponse.PostList;
             }
             else

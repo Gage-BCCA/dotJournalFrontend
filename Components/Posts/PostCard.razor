@@ -1,14 +1,17 @@
-<div class="postcard">
+<div class="postcard" style="@(IsCompact ? "flex: 1 0 30%" : "flex: 1 0 75%")">
     <div class="tags">
-        <div class="tags__item">
-            <p>Python</p>
-        </div>
-        <div class="tags__item">
-            <p>Python</p>
-        </div>
+        @if (Post.Tags.Any())
+        {
+            <div class="tags__item">
+                @foreach (string tag in Post.Tags)
+                {
+                    <p>@tag</p>
+                }
+            </div>
+        }
     </div>
     <h3 class="postcard__title">@Post.Title</h3>
-    <p class="postcard__language">@Post.Blurb</p>
+    <p class="postcard__blurb">@Post.Blurb</p>
     <div class="postcard__link">
         <a href="/posts/@Post.PostId">See more</a>
     </div>

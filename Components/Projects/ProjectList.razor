@@ -1,0 +1,28 @@
+
+@if (_isLoading) 
+{
+    <p>Loading....</p>
+}
+else
+{
+    @if (_getProjectError)
+    {
+        <p>
+            There was a problem fetching projects. Please try again or
+            wait until later. I am not good at coding.
+        </p>
+    }
+    else
+    {
+        <div class="list">
+            @foreach (ProjectSummary summary in _projectSummaries)
+            {
+                <ProjectCard ProjectSummary=@summary></ProjectCard>
+            }
+        </div>
+    }
+
+}
+
+
+

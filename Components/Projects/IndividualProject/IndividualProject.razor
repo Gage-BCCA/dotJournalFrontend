@@ -5,22 +5,19 @@
 else
 {
     // Handle Errors
-    @if (_getPostError)
+    @if (_getProjectError)
     {
         <h1>An Error Occurred</h1>
     }
-    else 
+    else
     {
         <div class="post">
             <div class="post__title">
-                <h1>@_post.Title</h1> 
+                <h1>@_project.Title</h1>
             </div>
             <div class="post__blurb">
-                <p>@_post.Blurb</p>
-            </div>
-            <div class="post__body">
-                @((MarkupString)ToHtml(_post.Content))
+                <p>@_project.Description</p>
             </div>
         </div>
-    } 
+    }
 }

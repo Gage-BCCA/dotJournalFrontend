@@ -16,8 +16,7 @@
             <div class="column__content">
                 <p>
                     This site is written using Blazor WASM (I love Blazor) for the
-                    frontend and a .NET Web API for the backend. The datastore is
-                    a SQL server.
+                    frontend and a .NET Web API for the backend. For persistence, I'm using Postgres.
                 </p> 
             </div>
 
@@ -40,4 +39,4 @@
     </div>
 </div>
 
-<PostList PostListTitle="Recent Posts"></PostList>
+<PostList PostListTitle="Recent Posts" IsCompact="@true" ApiEndpoint="recent"></PostList>

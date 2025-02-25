@@ -1,5 +1,4 @@
 .postcard {
-    flex: 1 1 25%;
     background: #2c3e50;
     padding: .5rem;
     margin: .5rem;
@@ -8,13 +7,14 @@
     box-shadow: 10px 5px 5px #95a5a6;
     transition-duration: 400ms;
     overflow-x: hidden;
-    height: 200px;
+    height: 300px;
     align-content: center;
 }
 
     .postcard:hover {
         flex-grow: 15;
         background-color: #b32121;
+        height: 350px;
     }
     
     .postcard:hover > * {
@@ -23,22 +23,59 @@
 
     .postcard:hover .postcard__link {
         opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .postcard:hover .postcard__blurb {
+        opacity: 1;
+        visibility: visible;
+        text-align: center;
+        padding: 1rem;
+        transform: translateX(0);
+    }
+    
+    .postcard:hover .postcard__title {
+        font-size: 1.4rem;
     }
 
 .postcard__link {
-    text-align: left;
+    text-align: center;
     opacity: 0;
     transition: 450ms;
 }
 
 .postcard__title {
     transition: 300ms;
+    padding: 1rem;
 }
 
 .postcard__language {
     transition: 400ms;
 }
 
+.postcard__blurb {
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 450ms;
+}
+
+.postcard__link {
+    opacity: 0;
+    transition-duration: 250ms;
+    margin: 4rem auto 0 auto;
+    background-color: #2c3e50;
+    padding: .5rem;
+    border-radius: 5px;
+    width: 50%;
+}
+
+    .postcard__link:hover {
+        background-color: #34495e;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+    
 .tags {
     display: flex;
     flex-wrap: wrap;

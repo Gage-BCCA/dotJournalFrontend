@@ -1,0 +1,58 @@
+.card {
+    padding: 1rem;
+    margin: 2rem 2rem;
+    text-align: center;
+    border-radius: 5px;
+    transition-duration: 450ms;
+    background-color: #c0392b;
+    width:50%;
+    color: white;
+    box-shadow: 10px 5px 5px gray;
+    flex: 1 1 40%;
+}
+
+    .card:nth-child(even) {
+        box-shadow: 10px 5px 5px lightgray;
+        background-color: lightgray;
+        color: black;
+    }
+
+    .card:hover {
+        flex-grow: 5;
+    }
+
+    .card:hover > .card__link {
+        opacity: 1;
+    }
+    
+    
+.card__link {
+    opacity: 0;
+    transition-duration: 250ms;
+    margin: 4rem auto 0 auto;
+    background-color: #2c3e50;
+    padding: .5rem;
+    border-radius: 5px;
+    width: 50%;
+}
+
+    .card__link:hover {
+        background-color: #34495e;
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    .card:nth-child(even) .card__link {
+        background-color: #c0392b;
+    }
+    
+    .card:nth-child(even) .card__link:hover {
+        background-color: #b32121;
+    }
+
+        
+
+    
+
+    
+    

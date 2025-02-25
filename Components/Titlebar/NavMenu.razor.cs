@@ -1,4 +1,5 @@
 using CodeJournal.Entities;
+using CodeJournal.Entities.ComponentModels;
 using Microsoft.AspNetCore.Components;
 
 namespace CodeJournal.Components.Titlebar

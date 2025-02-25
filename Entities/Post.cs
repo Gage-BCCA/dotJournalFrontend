@@ -4,7 +4,7 @@ namespace CodeJournal.Entities;
 
 public class Post
 {
-    [JsonPropertyName("postId")]
+    [JsonPropertyName("id")]
     public int PostId { get; set; }
     
     [JsonPropertyName("title")]
@@ -33,4 +33,9 @@ public class Post
     
     [JsonPropertyName("parentProjectTitle")]
     public string ParentProjectTitle { get; set; }
+
+    public void FormatContent()
+    {
+        Content = Content.Replace("\\n", "\r\n");;
+    }
 }
