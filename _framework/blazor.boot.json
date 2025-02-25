@@ -1,9 +1,9 @@
 {
   "mainAssemblyName": "CodeJournal",
   "resources": {
-    "hash": "sha256-LE3RYMeKKEdcxlBsBi8AmjxApJu1Db7nwLhLZH08uCU=",
+    "hash": "sha256-2dRfJnTFiF17AdL8jEH7WjXotE/A4wBuQpvS18e8+sM=",
     "fingerprinting": {
-      "CodeJournal.u1qxekppp1.wasm": "CodeJournal.wasm",
+      "CodeJournal.zg355l2h0e.wasm": "CodeJournal.wasm",
       "Markdig.82zk74d1io.wasm": "Markdig.wasm",
       "Microsoft.AspNetCore.Components.ja6brabvsn.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.7apenvi18o.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -66,7 +66,7 @@
       "System.Runtime.InteropServices.JavaScript.f4ln4hfftw.wasm": "sha256-r+LQmgoVdHgFKWJvUNAR7HQZAtSw+xvBIQ6siSPsBNM="
     },
     "assembly": {
-      "CodeJournal.u1qxekppp1.wasm": "sha256-InD9h/y3Es5wMPDGJcjvSOL9xcmmshFdpNLXRJ2KR1g=",
+      "CodeJournal.zg355l2h0e.wasm": "sha256-05mb6dc6v7Z9WTvztd1y/NMbJ3mST+7H/9FCOLF1OhQ=",
       "Markdig.82zk74d1io.wasm": "sha256-gPUwGTHTe/sd4xmteeOSYd4a/J4deDy13pbwodSYfwc=",
       "Microsoft.AspNetCore.Components.ja6brabvsn.wasm": "sha256-m8fNFkBYkKoxRVFxAfSGS+MUtQvSnopgpe7eHHMDlao=",
       "Microsoft.AspNetCore.Components.Web.7apenvi18o.wasm": "sha256-fyqnB2DYAO80AStwVkG2g+mFplGXI54QNWpUbk5VoiE=",
