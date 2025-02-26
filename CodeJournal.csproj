@@ -152,6 +152,7 @@
     <_ContentIncludedByDefault Remove="wwwroot\_framework\System.Threading.ax55v6kmii.wasm" />
     <_ContentIncludedByDefault Remove="wwwroot\_framework\System.Threading.ax55v6kmii.wasm.br" />
     <_ContentIncludedByDefault Remove="wwwroot\_framework\System.Threading.ax55v6kmii.wasm.gz" />
+    <_ContentIncludedByDefault Remove="pub\_framework\blazor.boot.json" />
   </ItemGroup>
 
 </Project>
