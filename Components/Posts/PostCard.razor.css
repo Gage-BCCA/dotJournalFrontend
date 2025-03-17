@@ -7,7 +7,7 @@
     box-shadow: 10px 5px 5px #95a5a6;
     transition-duration: 400ms;
     overflow-x: hidden;
-    height: 300px;
+    min-height: 300px;
     align-content: center;
 }
 
@@ -92,3 +92,15 @@
     .tags__item > p {
         margin: .5rem;
     }
+    
+@media (max-width: 800px) {
+    .postcard__blurb {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .postcard__link {
+        opacity: 1;
+        background-color: #c0392b;
+    }
+}

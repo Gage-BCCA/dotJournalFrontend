@@ -5,3 +5,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 800px) {
+    .list {
+        width: 100%;
+        display: block;
+    }
+}

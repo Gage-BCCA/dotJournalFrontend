@@ -13,3 +13,14 @@
     text-align: center;
     margin-bottom: 75px;
 }
+
+@media (max-width: 800px) {
+    .post {
+        width: 90%;
+        padding: 0;
+    }
+    
+    .post__blurb {
+        box-shadow: 8px 8px #e74c3c;
+    }
+}

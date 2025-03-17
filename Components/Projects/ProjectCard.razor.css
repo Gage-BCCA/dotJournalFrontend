@@ -49,7 +49,18 @@
     .card:nth-child(even) .card__link:hover {
         background-color: #b32121;
     }
-
+    
+@media (max-width: 800px) {
+    .card {
+        margin: auto auto 2rem auto;
+        width: 80%;
+    }
+    
+    .card__link {
+        opacity: 1;
+        width: 80%;
+    }
+}
         
 
     

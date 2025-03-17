@@ -9,3 +9,14 @@
     padding: .5rem;
     margin: .5rem;
 }
+
+@media (max-width: 800px) {
+    .title {
+        text-align: center;
+    }
+    
+    .postlist {
+        display: block;
+        text-align: center;
+    }
+}
