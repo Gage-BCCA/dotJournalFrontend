@@ -52,13 +52,4 @@
         background-color: #34495e;
         padding: 0;
     }
-    
-    .dropdown__option {
-        background-color: transparent;
-    }
-    
-    .dropdown__option {
-        padding: 0;
-        margin-top: 1.5rem;
-    }
 }
