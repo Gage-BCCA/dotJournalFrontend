@@ -9,7 +9,7 @@ namespace CodeJournal.Components.Titlebar
         private List<DropdownLink> _postDropdownLinks = new List<DropdownLink>
         {
             new DropdownLink("All Posts", "posts/all/"),
-            new DropdownLink("Tags", "posts/tags/all")
+            new DropdownLink("Posts By Tags", "posts/tags/all")
         };
     }  
 }

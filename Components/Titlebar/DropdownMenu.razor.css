@@ -39,3 +39,26 @@
     opacity: 1;
     visibility: visible;
 }
+
+@media screen and (max-width: 800px) {
+    .hidden {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .dropdown__menu {
+        position: static;
+        width: 100%;
+        background-color: #34495e;
+        padding: 0;
+    }
+    
+    .dropdown__option {
+        background-color: transparent;
+    }
+    
+    .dropdown__option {
+        padding: 0;
+        margin-top: 1.5rem;
+    }
+}

@@ -40,4 +40,18 @@
         text-decoration-thickness: .25rem;
     }
     
+@media only screen and (min-width: 800px) {
+    .navmenu {
+        display: block;
+        border-radius: 0;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .navmenu__item {
+        padding: .75rem;
+        margin: 1rem auto 1rem auto;
+    }
+}
+    
     

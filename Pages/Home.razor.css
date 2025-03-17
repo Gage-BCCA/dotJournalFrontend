@@ -47,4 +47,10 @@
         min-height: 300px;
         margin: auto;
     }
+    
+    .column h2 {
+        width: 100%;
+        padding: 2rem 0;
+        margin: auto;
+    }
 }

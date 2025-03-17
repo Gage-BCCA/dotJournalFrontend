@@ -14,7 +14,6 @@
     .postcard:hover {
         flex-grow: 15;
         background-color: #b32121;
-        height: 350px;
     }
     
     .postcard:hover > * {
