@@ -102,4 +102,18 @@
         opacity: 1;
         background-color: #c0392b;
     }
+
+    .postcard:hover > * {
+        transform: translateX(0px);
+    }
+    
+    .postcard:hover .postcard__link {
+        background-color: #34495e;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .postcard:hover .postcard__blurb {
+        padding: 0;
+    }
 }

@@ -51,5 +51,6 @@
         width: 100%;
         background-color: #34495e;
         padding: 0;
+        box-shadow: none;
     }
 }
